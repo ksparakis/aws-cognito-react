@@ -63,7 +63,7 @@ export async function signUpUserWithEmail(username: string, email: string, passw
         Value: 'test',
       }),
       new CognitoUserAttribute({
-        Name: 'custom:display_name',
+        Name: 'custom:displayName',
         Value: 'coolguy6',
       }),
     ]
