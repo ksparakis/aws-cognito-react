@@ -54,6 +54,18 @@ export async function signUpUserWithEmail(username: string, email: string, passw
         Name: 'email',
         Value: email,
       }),
+      new CognitoUserAttribute({
+        Name: 'family_name',
+        Value: 'tester',
+      }),
+      new CognitoUserAttribute({
+        Name: 'name',
+        Value: 'test',
+      }),
+      new CognitoUserAttribute({
+        Name: 'custom:display_name',
+        Value: 'coolguy6',
+      }),
     ]
 
     userPool.signUp(username, password, attributeList, [], function (err, res) {
